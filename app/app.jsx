@@ -6,9 +6,11 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+// load foundation 
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
+
 ReactDOM.render(
-  // The code we want to render
-  // router tag comes from react-router
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <Route path="about" component={About} />
@@ -16,6 +18,5 @@ ReactDOM.render(
       <IndexRoute component={Weather} />
     </Route>
   </Router>,
-  // the place we want to render the code to
   document.getElementById('app')
 );
