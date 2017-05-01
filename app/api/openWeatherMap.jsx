@@ -17,7 +17,7 @@ module.exports = {
     // }, function (res) {
     //   throw new Error(res.data.message);
     // });
-    }, function () {
+    }, function (err) {
       throw new Error('Invalid request!');
     });
   }
